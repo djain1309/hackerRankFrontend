@@ -7,42 +7,56 @@ https://www.hackerrank.com/work/questions/frontend/1436124/view/step3
 # Animation For Question: ./WorkingModel.gif
 
 # Problems:
-1) Test Case "Should have the correct input type for all fields"
-It expects that the data type of CVV should be number - Which is also given as theory in question too [fine]
 
-But, "Should validate the CVV correctly" Scenario, it tries to add string to a "number" type:
-which will result in that it will not add to the input box as its type "number" does not allow "character" to append
+# Test Cases Documentation
 
-However, If I go reverse, making the CVV input type as "text" then first test cases will get failed as its expecting "number"
+## Test Case: "Should have the correct input type for all fields"
 
-2) Test Case "Should validate the year correctly"
-"for (let i = 0; i < 4; i++) {
-      let year = d.getFullYear();
-      year += Math.floor(Math.random() * 4);
-      fireEvent.change(yearInput, {
-        target: {
-          value: year.toString(),
-        },
-      });
-"
-This Loop will create an year by running 4 times and generating whole [upper] number;
-Possible case: 
-  Year is less than Current year
-  Year can be equal to Current year
-  Year can be one/two/three greater than Current Year
-  Year can be more than 3 than current year
+### Problem Statement
+This test case expects that the data type of CVV should be a number, which aligns with the theory mentioned in the question.
 
-  **** ALL these test cases are already handled below****
-        const currentYear  = new Date().getFullYear();
-        const expYear = parseInt(update.expYear, 10);
+### Issue
+In the "Should validate the CVV correctly" scenario, the test tries to add a string to a "number" type input. This will result in the string not being added to the input box, as its "number" type does not allow characters to append.
 
-        if (expYear < currentYear || update.expYear.length !== 4 || update.expYear > currentYear +3) {
-          setCardExpYearError(true);
-        } else {
-          setCardExpYearError(false);
-        }
+### Complication
+However, if the CVV input type is changed to "text", then the first test case will fail as it expects a "number" type.
+
+## Test Case: "Should validate the year correctly"
+
+### Scenario
+```javascript
+const d = new Date();
+for (let i = 0; i < 4; i++) {
+  let year = d.getFullYear();
+  year += Math.floor(Math.random() * 4);
+  fireEvent.change(yearInput, {
+    target: {
+      value: year.toString(),
+    },
+  });
+}
+
+### Explanation
+This loop runs four times, generating a year each time. The possible cases for the year value are:
+- Less than the current year.
+- Equal to the current year.
+- One, two, or three years greater than the current year.
+- More than three years greater than the current year.
+
+### Test Case Logic: All these scenarios are already handled in the following code:
+
+javascript
+const currentYear = new Date().getFullYear();
+const expYear = parseInt(update.expYear, 10);
+
+if (expYear < currentYear || update.expYear.length !== 4 || update.expYear > currentYear + 3) {
+  setCardExpYearError(true);
+} else {
+  setCardExpYearError(false);
+}
+
  
-## Environment
+### Environment
 
 - React Version: 16.13.1
 - Node Version: 14(LTS)
