@@ -1,0 +1,21 @@
+/* Hide the spinner for input type number
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* For Firefox 
+} */
+
+/* Hide the spinner for input with class 'no-spinners' */
+.no-spinners::-webkit-inner-spin-button, 
+.no-spinners::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.no-spinners {
+  -moz-appearance: textfield; /* For Firefox */
+}

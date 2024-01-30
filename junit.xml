@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="7" failures="2" errors="0" time="2.114">
+  <testsuite name="Payment Validation" errors="0" failures="2" skipped="0" timestamp="2024-01-30T21:16:02" time="1.175" tests="7">
+    <testcase classname="Payment Validation Should have the correct input type for all fields" name="Payment Validation Should have the correct input type for all fields" time="0.082">
+    </testcase>
+    <testcase classname="Payment Validation Should validate the card number correctly" name="Payment Validation Should validate the card number correctly" time="0.05">
+    </testcase>
+    <testcase classname="Payment Validation Should validate the name correctly" name="Payment Validation Should validate the name correctly" time="0.02">
+    </testcase>
+    <testcase classname="Payment Validation Should validate the month correctly" name="Payment Validation Should validate the month correctly" time="0.021">
+    </testcase>
+    <testcase classname="Payment Validation Should validate the year correctly" name="Payment Validation Should validate the year correctly" time="0.017">
+      <failure>Error: expect(received).toBeNull()
+
+Received: &lt;p class=&quot;invalid-text&quot; data-testid=&quot;yearInputError&quot; /&gt;
+    at Object.&lt;anonymous&gt; (D:\Technologies\React\Projects\Payment Validation\src\App.test.js:177:30)
+    at Promise.then.completed (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\utils.js:391:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\utils.js:316:10)
+    at _callCircusTest (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\run.js:155:3)
+    at _runTestsForDescribeBlock (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\run.js:66:9)
+    at _runTestsForDescribeBlock (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\run.js:60:9)
+    at run (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\run.js:25:3)
+    at runAndTransformResultsToJestFormat (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:170:21)
+    at jestAdapter (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:82:19)
+    at runTestInternal (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-runner\build\runTest.js:389:16)
+    at runTest (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-runner\build\runTest.js:475:34)
+    at TestRunner.runTests (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-runner\build\index.js:101:12)
+    at TestScheduler.scheduleTests (D:\Technologies\React\Projects\Payment Validation\node_modules\@jest\core\build\TestScheduler.js:333:13)
+    at runJest (D:\Technologies\React\Projects\Payment Validation\node_modules\@jest\core\build\runJest.js:404:19)
+    at _run10000 (D:\Technologies\React\Projects\Payment Validation\node_modules\@jest\core\build\cli\index.js:320:7)
+    at runCLI (D:\Technologies\React\Projects\Payment Validation\node_modules\@jest\core\build\cli\index.js:173:3)
+    at Object.run (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-cli\build\cli\index.js:155:37)</failure>
+    </testcase>
+    <testcase classname="Payment Validation Should validate the CVV correctly" name="Payment Validation Should validate the CVV correctly" time="0.015">
+      <failure>Error: expect(received).toBeNull()
+
+Received: &lt;p class=&quot;invalid-text&quot; data-testid=&quot;cvvInputError&quot; /&gt;
+    at Object.&lt;anonymous&gt; (D:\Technologies\React\Projects\Payment Validation\src\App.test.js:208:27)
+    at Promise.then.completed (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\utils.js:391:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\utils.js:316:10)
+    at _callCircusTest (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\run.js:155:3)
+    at _runTestsForDescribeBlock (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\run.js:66:9)
+    at _runTestsForDescribeBlock (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\run.js:60:9)
+    at run (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\run.js:25:3)
+    at runAndTransformResultsToJestFormat (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:170:21)
+    at jestAdapter (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:82:19)
+    at runTestInternal (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-runner\build\runTest.js:389:16)
+    at runTest (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-runner\build\runTest.js:475:34)
+    at TestRunner.runTests (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-runner\build\index.js:101:12)
+    at TestScheduler.scheduleTests (D:\Technologies\React\Projects\Payment Validation\node_modules\@jest\core\build\TestScheduler.js:333:13)
+    at runJest (D:\Technologies\React\Projects\Payment Validation\node_modules\@jest\core\build\runJest.js:404:19)
+    at _run10000 (D:\Technologies\React\Projects\Payment Validation\node_modules\@jest\core\build\cli\index.js:320:7)
+    at runCLI (D:\Technologies\React\Projects\Payment Validation\node_modules\@jest\core\build\cli\index.js:173:3)
+    at Object.run (D:\Technologies\React\Projects\Payment Validation\node_modules\jest-cli\build\cli\index.js:155:37)</failure>
+    </testcase>
+    <testcase classname="Payment Validation Submit button should only be enabled if all validations are complete" name="Payment Validation Submit button should only be enabled if all validations are complete" time="0.026">
+    </testcase>
+  </testsuite>
+</testsuites>
