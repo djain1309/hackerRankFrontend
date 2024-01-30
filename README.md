@@ -1,5 +1,47 @@
 # React: Payments Validation
 
+# Link to HackerRank FrontEnd/FullStack Question:
+https://www.hackerrank.com/work/questions/frontend/1436124/view/step3
+
+# Question Find: ./Question.txt
+# Animation For Question: ./WorkingModel.gif
+
+# Problems:
+1) Test Case "Should have the correct input type for all fields"
+It expects that the data type of CVV should be number - Which is also given as theory in question too [fine]
+
+But, "Should validate the CVV correctly" Scenario, it tries to add string to a "number" type:
+which will result in that it will not add to the input box as its type "number" does not allow "character" to append
+
+However, If I go reverse, making the CVV input type as "text" then first test cases will get failed as its expecting "number"
+
+2) Test Case "Should validate the year correctly"
+"for (let i = 0; i < 4; i++) {
+      let year = d.getFullYear();
+      year += Math.floor(Math.random() * 4);
+      fireEvent.change(yearInput, {
+        target: {
+          value: year.toString(),
+        },
+      });
+"
+This Loop will create an year by running 4 times and generating whole [upper] number;
+Possible case: 
+  Year is less than Current year
+  Year can be equal to Current year
+  Year can be one/two/three greater than Current Year
+  Year can be more than 3 than current year
+
+  **** ALL these test cases are already handled below****
+        const currentYear  = new Date().getFullYear();
+        const expYear = parseInt(update.expYear, 10);
+
+        if (expYear < currentYear || update.expYear.length !== 4 || update.expYear > currentYear +3) {
+          setCardExpYearError(true);
+        } else {
+          setCardExpYearError(false);
+        }
+ 
 ## Environment
 
 - React Version: 16.13.1
