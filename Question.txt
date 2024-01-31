@@ -1,0 +1,92 @@
+
+Hide animation
+
+
+
+Complete a component that accepts and validates credit card information. It should perform the following validations.
+
+The card number input field:
+
+The field is required.
+
+It should be a number consisting of exactly 16 digits.
+
+If there is an error, the error message 'Invalid Card Number' is shown inside <p data-test-id="numberInputError"></p>. 
+
+
+
+The cardholder name input field:
+
+The field is required.
+
+The name should contain English letters only.
+
+If there is an error, the error message 'Invalid Card Name' is shown inside <p data-test-id="nameInputError"></p>. 
+
+
+
+The expiration month input field:
+
+The field is required.
+
+It should consist of exactly 2 digits with a value from 01 to 12 that denotes January to December.
+
+If there is an error, the error message 'Invalid Month' is shown inside <p data-test-id="monthInputError"></p>. 
+
+
+
+The expiration year input field:
+
+The field is required.
+
+The year is exactly 4 digits, which is greater than or equal to the current year and no more than 3 years in the future.
+
+If there is an error, the error message 'Invalid Year' is shown inside <p data-test-id="yearInputError"></p>.
+
+
+
+The cvv/cvc input field:
+
+The field is required.
+
+It should consist of exactly 3 digits.
+
+If there is an error, the error message 'Invalid CVV' is shown inside <p data-test-id="cvvInputError"></p>.
+
+
+
+Initially, the submit button should be disabled. When any field is invalid, the submit button should be disabled. 
+
+When all fields are valid and have been touched, the submit button should be enabled.
+
+
+
+The following data-test-id attributes are required in the component for the tests to pass:
+
+The card number input: 'numberInput'
+
+The cardholder name input: 'nameInput'
+
+The expiration month input: 'monthInput'
+
+The expiration year input: 'yearInput'
+
+The cvv/cvc input: 'cvvInput'
+
+The submit button: 'submit-button'
+
+The <p> containing the error message for:
+
+the card number input: 'numberInputError'
+
+the cardholder name input: 'nameInputError'
+
+the expiration month input: 'monthInputError'
+
+the expiration year input: 'yearInputError'
+
+the cvv/cvc input: 'cvvInputError'
+
+
+
+Please note that the component has these data-test-id attributes for test cases and certain classes and ids for rendering purposes. They should not be changed.
